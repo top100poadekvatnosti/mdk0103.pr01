@@ -12,8 +12,8 @@ class TodoViewModel: ViewModel() {
     fun fetchTodos(){
         viewModelScope.launch {
             try {
-                val TodosResponse = RetrofitClient.todoApi.getAllTodos()
-                val todos = TodosResponse.todos
+                val todosResponse = RetrofitClient.todoApi.getAllTodos()
+                val todos = todosResponse.todos
                 for (todo in todos){
                     Log.d("TodoViewModel", "Текст - ${todo.todo}  " + "Отметка о выполнении - ${todo.status}  ")
                 }

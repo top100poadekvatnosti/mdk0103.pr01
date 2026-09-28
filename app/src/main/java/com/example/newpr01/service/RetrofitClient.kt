@@ -26,4 +26,6 @@ object RetrofitClient {
         .build()
 
     val todoApi: TodoInterface = retrofit.create(TodoInterface::class.java)
+    val quoteApi: QuoteInterface = retrofit.create(QuoteInterface::class.java)
+    val postApi: PostInterface = retrofit.create(PostInterface::class.java)
 }
