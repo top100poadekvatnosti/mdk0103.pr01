@@ -4,9 +4,7 @@ import android.util.Log
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import kotlinx.coroutines.launch
-import com.example.newpr01.data.*
-import com.example.newpr01.service.RetrofitClient
-import com.example.newpr01.service.*
+import com.example.newpr01.retrofit.RetrofitClient
 
 class TodoViewModel: ViewModel() {
     fun fetchTodos(){

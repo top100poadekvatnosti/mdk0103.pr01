@@ -1,10 +1,11 @@
-package com.example.newpr01.service
+package com.example.newpr01.viewmodel
 
 
 import android.util.Log
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.example.newpr01.data.Posts
+import com.example.newpr01.retrofit.RetrofitClient
 import kotlinx.coroutines.launch
 
 class PostViewModel: ViewModel() {
