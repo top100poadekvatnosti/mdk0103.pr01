@@ -10,6 +10,7 @@ import com.example.newpr01.data.Products
 import com.example.newpr01.data.Tags
 import com.example.newpr01.viewmodel.PostViewModel
 import com.example.newpr01.viewmodel.ProductViewModel
+import com.example.newpr01.viewmodel.RecipeViewModel
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -18,6 +19,7 @@ class MainActivity : ComponentActivity() {
         setContent {
             //val todoViewModel: TodoViewModel = viewModel()
             //todoViewModel.fetchTodos()
+//---------------------------------------------------------------------
 //            val postViewModel: PostViewModel = viewModel()
 //            val post = Posts(
 //                name = "Уют в каждой детали: встречайте нашу новинку!",
@@ -31,8 +33,12 @@ class MainActivity : ComponentActivity() {
 //                )
 //            )
 //            postViewModel.createPost(post)
-            val productViewModel: ProductViewModel = viewModel()
-            productViewModel.fetchAndUpdateProduct()
+//---------------------------------------------------------------------
+//            val productViewModel: ProductViewModel = viewModel()
+//            productViewModel.fetchAndUpdateProduct()
+//---------------------------------------------------------------------
+            val recipeViewModel : RecipeViewModel = viewModel()
+            recipeViewModel.deleteRecipeById(30)
         }
     }
 }

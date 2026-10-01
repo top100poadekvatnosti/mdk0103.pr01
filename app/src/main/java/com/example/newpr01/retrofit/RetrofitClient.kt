@@ -2,6 +2,7 @@ package com.example.newpr01.retrofit
 
 import com.example.newpr01.service.PostInterface
 import com.example.newpr01.service.ProductsInterface
+import com.example.newpr01.service.RecipeInterface
 import com.example.newpr01.services.TodoInterface
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
@@ -30,4 +31,5 @@ object RetrofitClient {
     val todoApi: TodoInterface = retrofit.create(TodoInterface::class.java)
     val postApi: PostInterface = retrofit.create(PostInterface::class.java)
     val productApi: ProductsInterface = retrofit.create(ProductsInterface::class.java)
+    val recipeApi: RecipeInterface = retrofit.create(RecipeInterface::class.java)
 }
