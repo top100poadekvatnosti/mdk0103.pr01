@@ -12,14 +12,14 @@ import java.net.InetSocketAddress
 import java.net.Proxy
 
 object RetrofitClient {
-    //val proxy = Proxy(Proxy.Type.HTTP, InetSocketAddress("10.207.106.59", 3128))
+    val proxy = Proxy(Proxy.Type.HTTP, InetSocketAddress("10.207.106.59", 3128))
     val loggingInterceptor = HttpLoggingInterceptor().apply {
         level = HttpLoggingInterceptor.Level.BODY
     }
 
     val okHttpClient = OkHttpClient.Builder()
         .addInterceptor(loggingInterceptor)
-        //.proxy(proxy)
+        .proxy(proxy)
         .build()
 
     var retrofit: Retrofit = Retrofit.Builder()

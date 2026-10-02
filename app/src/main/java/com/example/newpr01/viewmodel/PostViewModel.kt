@@ -16,6 +16,7 @@ class PostViewModel: ViewModel() {
                 Log.d(
                     "createQuote",
                     "Название -> ${addedPosts.name}\n " +
+                            "Идентификатор пользователя -> ${addedPosts.userId}\n" +
                             "Текст -> ${addedPosts.text}\n " +
                             "Теги -> ${addedPosts.tag}\n "
                 )

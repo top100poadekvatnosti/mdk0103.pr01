@@ -19,26 +19,27 @@ class MainActivity : ComponentActivity() {
         setContent {
             //val todoViewModel: TodoViewModel = viewModel()
             //todoViewModel.fetchTodos()
+
+            val postViewModel: PostViewModel = viewModel()
+            val post = Posts(
+               name = "Уют в каждой детали: встречайте нашу новинку!",
+                text = "Мы знаем, как важно возвращаться туда, где тепло и спокойно. Наша новая коллекция ароматических свечей из соевого воска создана именно для таких моментов.",
+               userId = 15,
+                tag = listOf(Tags("декор дома"),
+                    Tags("уют в доме"),
+                    Tags("аромасвечи"),
+                    Tags("подарок девушке"),
+                    Tags("ручная работа"),
+                  Tags("новинка")
+               )
+          )
+            postViewModel.createPost(post)
+
+            //val productViewModel: ProductViewModel = viewModel()
+            //productViewModel.fetchAndUpdateProduct()
 //---------------------------------------------------------------------
-//            val postViewModel: PostViewModel = viewModel()
-//            val post = Posts(
-//                name = "Уют в каждой детали: встречайте нашу новинку!",
-//                text = "Мы знаем, как важно возвращаться туда, где тепло и спокойно. Наша новая коллекция ароматических свечей из соевого воска создана именно для таких моментов.",
-//                tag = listOf(Tags("декор дома"),
-//                    Tags("уют в доме"),
-//                    Tags("аромасвечи"),
-//                    Tags("подарок девушке"),
-//                    Tags("ручная работа"),
-//                    Tags("новинка")
-//                )
-//            )
-//            postViewModel.createPost(post)
-//---------------------------------------------------------------------
-//            val productViewModel: ProductViewModel = viewModel()
-//            productViewModel.fetchAndUpdateProduct()
-//---------------------------------------------------------------------
-            val recipeViewModel : RecipeViewModel = viewModel()
-            recipeViewModel.deleteRecipeById(30)
+//            val recipeViewModel : RecipeViewModel = viewModel()
+ //           recipeViewModel.deleteRecipeById(30)
         }
     }
 }
